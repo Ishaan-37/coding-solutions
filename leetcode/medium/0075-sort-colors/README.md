@@ -44,47 +44,52 @@ Output: [0,1,2]
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.6 MB (beats 17.68%)  
-**Submitted:** 2026-07-16T09:51:40.337Z  
+**Memory:** 12.3 MB (beats 54.76%)  
+**Submitted:** 2026-07-16T10:41:21.775Z  
 
 ```py
 class Solution:
     def sortColors(self, nums):
 
-        # Count the number of 0s, 1s, and 2s
-        count0 = 0
-        count1 = 0
-        count2 = 0
+        # Pointer for placing 0s
+        low = 0
 
-        # Traverse the array once to count each value
-        for num in nums:
-            if num == 0:
-                count0 += 1
-            elif num == 1:
-                count1 += 1
+        # Current element being checked
+        mid = 0
+
+        # Pointer for placing 2s
+        high = len(nums) - 1
+
+        # Traverse until all elements are processed
+        while mid <= high:
+
+            # If current element is 0
+            if nums[mid] == 0:
+
+                # Swap with low pointer
+                nums[low], nums[mid] = nums[mid], nums[low]
+
+                # Move both pointers forward
+                low += 1
+                mid += 1
+
+            # If current element is 1
+            elif nums[mid] == 1:
+
+                # Already in correct position
+                mid += 1
+
+            # If current element is 2
             else:
-                count2 += 1
 
-        # Start filling the array from index 0
-        index = 0
+                # Swap with high pointer
+                nums[mid], nums[high] = nums[high], nums[mid]
 
-        # Fill all the 0s
-        while count0 > 0:
-            nums[index] = 0
-            index += 1
-            count0 -= 1
+                # Move high pointer backward
+                high -= 1
 
-        # Fill all the 1s
-        while count1 > 0:
-            nums[index] = 1
-            index += 1
-            count1 -= 1
-
-        # Fill all the 2s
-        while count2 > 0:
-            nums[index] = 2
-            index += 1
-            count2 -= 1
+                # Do NOT increment mid
+                # The swapped element needs to be checked
 ```
 
 ---
