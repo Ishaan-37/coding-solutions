@@ -41,9 +41,9 @@ Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
 ## Solution
 
 **Language:** Python  
-**Runtime:** 402 ms (beats 94.55%)  
-**Memory:** 12.6 MB (beats 6.28%)  
-**Submitted:** 2026-07-15T17:54:13.807Z  
+**Runtime:** 407 ms (beats 93.69%)  
+**Memory:** 12.4 MB (beats 77.37%)  
+**Submitted:** 2026-07-16T09:00:08.053Z  
 
 ```py
 class Solution:
