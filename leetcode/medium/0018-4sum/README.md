@@ -41,31 +41,33 @@ Output: [[2,2,2,2]]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 574 ms (beats 16.75%)  
-**Memory:** 12.6 MB (beats 29.67%)  
-**Submitted:** 2026-07-17T19:05:44.165Z  
+**Runtime:** 473 ms (beats 90.29%)  
+**Memory:** 12.5 MB (beats 29.61%)  
+**Submitted:** 2026-07-19T15:46:05.684Z  
 
 ```py
 class Solution:
     def fourSum(self, nums, target):
         nums.sort()
-        n = len(nums)
         ans = []
 
-        # Fix first element
+        n = len(nums)
+
+        # Fix first number
         for i in range(n - 3):
 
-            # Skip duplicate first elements
+            # Skip duplicate first numbers
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-            # Fix second element
+            # Fix second number
             for j in range(i + 1, n - 2):
 
-                # Skip duplicate second elements
+                # Skip duplicate second numbers
                 if j > i + 1 and nums[j] == nums[j - 1]:
                     continue
 
+                # Two pointers
                 left = j + 1
                 right = n - 1
 
@@ -85,11 +87,11 @@ class Solution:
                         left += 1
                         right -= 1
 
-                        # Skip duplicate third elements
+                        # Skip duplicate third numbers
                         while left < right and nums[left] == nums[left - 1]:
                             left += 1
 
-                        # Skip duplicate fourth elements
+                        # Skip duplicate fourth numbers
                         while left < right and nums[right] == nums[right + 1]:
                             right -= 1
 
