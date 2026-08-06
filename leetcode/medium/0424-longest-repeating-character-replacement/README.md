@@ -40,9 +40,9 @@ There may exists other ways to achieve this answer too.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 83 ms (beats 99.21%)  
+**Runtime:** 82 ms (beats 99.26%)  
 **Memory:** 15.5 MB (beats 29.15%)  
-**Submitted:** 2026-08-06T08:45:39.425Z  
+**Submitted:** 2026-08-06T11:22:13.550Z  
 
 ```py
 class Solution(object):
