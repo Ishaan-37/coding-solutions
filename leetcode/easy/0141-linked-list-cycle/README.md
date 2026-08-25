@@ -54,9 +54,9 @@ Explanation: There is no cycle in the linked list.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 43 ms (beats 19.99%)  
-**Memory:** 19.6 MB (beats 14.75%)  
-**Submitted:** 2026-08-20T04:24:53.149Z  
+**Runtime:** 31 ms (beats 87.12%)  
+**Memory:** 19.4 MB (beats 65.83%)  
+**Submitted:** 2026-08-25T04:44:34.049Z  
 
 ```py
 class Solution(object):
@@ -67,8 +67,7 @@ class Solution(object):
             slow = slow.next
             fast = fast.next.next
             if slow == fast:
-              return True
-
+                return True
         return False
         
 ```
