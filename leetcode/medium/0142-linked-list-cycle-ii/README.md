@@ -54,9 +54,9 @@ Explanation: There is no cycle in the linked list.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 29 ms (beats 79.05%)  
-**Memory:** 18.7 MB (beats 21.37%)  
-**Submitted:** 2026-08-20T04:38:42.466Z  
+**Runtime:** 35 ms (beats 43.32%)  
+**Memory:** 18.6 MB (beats 89.95%)  
+**Submitted:** 2026-08-25T04:55:27.534Z  
 
 ```py
 class Solution(object):
