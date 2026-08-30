@@ -43,9 +43,9 @@ Explanation: The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8
 ## Solution
 
 **Language:** Python  
-**Runtime:** 107 ms (beats 48.59%)  
-**Memory:** 20.5 MB (beats 10.38%)  
-**Submitted:** 2026-08-29T10:35:44.333Z  
+**Runtime:** 90 ms (beats 83.49%)  
+**Memory:** 20.3 MB (beats 24.88%)  
+**Submitted:** 2026-08-30T19:52:41.330Z  
 
 ```py
 class Solution(object):
