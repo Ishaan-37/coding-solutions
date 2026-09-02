@@ -34,9 +34,9 @@ Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `f
 ## Solution
 
 **Language:** Python  
-**Runtime:** 23 ms (beats 48.07%)  
+**Runtime:** 27 ms (beats 21.86%)  
 **Memory:** 13.4 MB (beats 39.96%)  
-**Submitted:** 2026-09-02T07:06:28.830Z  
+**Submitted:** 2026-09-02T07:09:26.645Z  
 
 ```py
 class Solution(object):
