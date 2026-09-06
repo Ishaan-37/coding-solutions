@@ -47,23 +47,21 @@ Output: []
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 14.4 MB (beats 60.03%)  
-**Submitted:** 2026-08-27T06:21:02.912Z  
+**Memory:** 14.4 MB (beats 30.89%)  
+**Submitted:** 2026-09-06T13:42:36.173Z  
 
 ```py
+
 class Solution(object):
     def reverseList(self, head):
-        p = None
-        c = head
-
-        while c:
-            n = c.next
-            c.next = p
-            p = c
-            c = n
-
-        return p
-        
+        a = None
+        b = head
+        while b:
+            n = b.next
+            b.next = a
+            a = b
+            b = n
+        return a
 ```
 
 ---
