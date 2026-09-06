@@ -40,21 +40,19 @@ Output: [0]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 11 ms (beats 25.43%)  
-**Memory:** 13.5 MB (beats 77.11%)  
-**Submitted:** 2026-09-01T19:55:27.844Z  
+**Runtime:** 7 ms (beats 56.16%)  
+**Memory:** 13.4 MB (beats 77.19%)  
+**Submitted:** 2026-09-06T12:42:53.363Z  
 
 ```py
 class Solution(object):
     def moveZeroes(self, nums):
+        n = len(nums)
         j = 0
-
-        for i in range(len(nums)):
+        for i in range(0,n):
             if nums[i] != 0:
-                nums[i], nums[j] = nums[j], nums[i]
-                j += 1
-        
-        
+                nums[i],nums[j] = nums[j], nums[i]
+                j+=1
 ```
 
 ---
