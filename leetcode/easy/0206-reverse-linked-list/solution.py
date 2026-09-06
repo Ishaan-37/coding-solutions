@@ -1,13 +1,11 @@
+
 class Solution(object):
     def reverseList(self, head):
-        p = None
-        c = head
-
-        while c:
-            n = c.next
-            c.next = p
-            p = c
-            c = n
-
-        return p
-        
+        a = None
+        b = head
+        while b:
+            n = b.next
+            b.next = a
+            a = b
+            b = n
+        return a
