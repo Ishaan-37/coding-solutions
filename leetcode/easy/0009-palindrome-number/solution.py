@@ -4,5 +4,5 @@ class Solution(object):
         for i in range(len(x)):
             if x[i] != x[-i-1]:
                 return False 
-            else:
-                return True
+        else:
+            return True
