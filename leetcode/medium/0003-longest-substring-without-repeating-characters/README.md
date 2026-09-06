@@ -46,9 +46,9 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.4 MB  
-**Submitted:** 2026-09-06T08:51:09.095Z  
+**Runtime:** 327 ms (beats 46.34%)  
+**Memory:** 16.6 MB (beats 36.60%)  
+**Submitted:** 2026-09-06T08:52:18.842Z  
 
 ```py
 class Solution(object):
@@ -58,8 +58,8 @@ class Solution(object):
         d ={}
         for right in range(len(s)):
             if s[right] in d:
-                left = max(d[s[right]] + 1)
-                d[s[right]] = right
+                left = max(left, d[s[right]] + 1)
+            d[s[right]] = right
             ans = max(ans, right - left + 1)
         return ans
 ```
