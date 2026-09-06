@@ -48,9 +48,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.3 MB  
-**Submitted:** 2026-09-06T10:05:45.714Z  
+**Runtime:** 27 ms (beats 6.89%)  
+**Memory:** 12.4 MB (beats 18.77%)  
+**Submitted:** 2026-09-06T10:07:27.686Z  
 
 ```py
 class Solution(object):
@@ -59,8 +59,8 @@ class Solution(object):
         for i in range(len(x)):
             if x[i] != x[-i-1]:
                 return False 
-            else:
-                return True
+        else:
+            return True
 ```
 
 ---
