@@ -47,9 +47,9 @@ Explanation: "35427" is already an odd number.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 39 ms (beats 40.45%)  
+**Runtime:** 23 ms (beats 89.33%)  
 **Memory:** 16.9 MB (beats 64.47%)  
-**Submitted:** 2026-09-07T20:21:46.459Z  
+**Submitted:** 2026-09-07T20:25:46.319Z  
 
 ```py
 class Solution(object):
