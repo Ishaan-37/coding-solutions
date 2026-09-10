@@ -36,8 +36,8 @@ Output: [[1]]
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.5 MB (beats 27.59%)  
-**Submitted:** 2026-09-10T15:52:33.516Z  
+**Memory:** 12.3 MB (beats 64.48%)  
+**Submitted:** 2026-09-10T15:58:13.700Z  
 
 ```py
 class Solution(object):
