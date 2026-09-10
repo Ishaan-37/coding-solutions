@@ -49,19 +49,20 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 92 ms (beats 53.78%)  
-**Memory:** 20.9 MB (beats 95.05%)  
-**Submitted:** 2026-08-28T19:44:33.213Z  
+**Runtime:** 95 ms (beats 48.05%)  
+**Memory:** 21.3 MB (beats 25.24%)  
+**Submitted:** 2026-09-10T07:03:06.640Z  
 
 ```py
 class Solution(object):
     def maxSubArray(self, nums):
-        max_sum = nums[0]
-        cur_sum = nums[0]
-        for n in nums[1:]:
-            cur_sum = max( n, cur_sum + n )
-            max_sum = max( max_sum, cur_sum )
-        return max_sum
+        n = len(nums)
+        curr = nums[0]
+        prev = nums[0]
+        for i in range(1, n):
+            curr = max(nums[i], curr + nums[i])
+            prev = max(prev, curr)
+        return prev
 ```
 
 ---
