@@ -36,17 +36,19 @@ Output: [[1]]
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.3 MB (beats 64.48%)  
-**Submitted:** 2026-09-10T15:58:13.700Z  
+**Memory:** 12.5 MB (beats 27.58%)  
+**Submitted:** 2026-09-11T06:23:00.358Z  
 
 ```py
 class Solution(object):
     def generate(self, numRows):
-        ans = []
+        ans = []  #Jab tumhe loop ke andar results collect karne ho
         for i in range(numRows):
             row = [1] * (i + 1)
             for j in range(1, i):
-                row[j] = ans[i - 1][j - 1] + ans[i - 1][j]
+                left = ans[i-1][j-1]
+                right = ans[i-1][j]
+                row[j] = left + right
             ans.append(row)
         return ans
         
