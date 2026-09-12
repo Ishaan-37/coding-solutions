@@ -56,13 +56,12 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
 
 **Language:** Python  
 **Runtime:** 0 ms  
-**Memory:** 12.4 MB  
-**Submitted:** 2026-09-12T09:16:06.071Z  
+**Memory:** 12.3 MB  
+**Submitted:** 2026-09-12T09:16:19.691Z  
 
 ```py
 class Solution(object):
     def reverseWords(self, s):
-        for i in range(len(s)):
             return " ".join(s.split()[::-1])
 ```
 
