@@ -32,7 +32,7 @@ Explanation: target = 12 occurs 3 times in the given array so the output is 3.
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-13T12:54:03.632Z  
+**Submitted:** 2026-09-13T12:54:46.925Z  
 
 ```py
 class Solution:
@@ -41,10 +41,8 @@ class Solution:
         count = 0
         for i in range(n):
             if arr[i] != target:
-                continue
-            else:
                 count += 1
-        return count
+        return n-count
 ```
 
 ---
