@@ -1,20 +1,15 @@
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution(object):
     def mergeKLists(self, lists):
-        arr = []
-        for head in lists:
+        arr = [] #Empty array banaya
+        for head in lists:   #Har linked list par ja rahe ho
             while head:
-                arr.append(head.val)
-                head = head.next
+                arr.append(head.val)  #Value array mein daalo
+                head = head.next      #Next node par move karo
         arr.sort()
-        dummy = ListNode(0)
+        dummy = ListNode(0)        #Ek temporary/dummy node banaya
         curr = dummy
         for x in arr:
-            curr.next = ListNode(x)
+            curr.next = ListNode(x)   #New node banao
             curr = curr.next
         return dummy.next
         
