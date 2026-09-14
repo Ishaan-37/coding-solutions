@@ -56,9 +56,9 @@ Output: []
 ## Solution
 
 **Language:** Python  
-**Runtime:** 15 ms (beats 77.70%)  
-**Memory:** 20.7 MB (beats 5.46%)  
-**Submitted:** 2026-09-14T09:50:39.257Z  
+**Runtime:** 0 ms  
+**Memory:** 12.4 MB  
+**Submitted:** 2026-09-14T09:50:05.324Z  
 
 ```py
 # Definition for singly-linked list.
