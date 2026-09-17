@@ -47,17 +47,18 @@ Explanation: "35427" is already an odd number.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 28 ms (beats 85.26%)  
-**Memory:** 16.7 MB (beats 80.89%)  
-**Submitted:** 2026-09-07T20:29:30.204Z  
+**Runtime:** 0 ms  
+**Memory:** 12.4 MB  
+**Submitted:** 2026-09-17T07:53:45.101Z  
 
 ```py
 class Solution(object):
     def largestOddNumber(self, num):
-        for i in range(len(num)-1, -1, -1): #Last index se start karke, har baar 1 step peeche jaate hue first index tak loop karta hai.
-            if int(num[i]) % 2:
-                return num[:i+1] #String ke start (index 0) se index i tak ke characters leta hai; +1 isliye kyunki slicing mein ending index include nahi hota
-        return ""
+        n = len(num)
+        for i in range(n):
+            if int(num[i]) % 2 == 1:
+                return num[i]
+            
 ```
 
 ---
