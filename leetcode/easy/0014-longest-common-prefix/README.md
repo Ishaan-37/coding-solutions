@@ -38,9 +38,9 @@ Explanation: There is no common prefix among the input strings.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 7 ms (beats 5.40%)  
-**Memory:** 12.4 MB (beats 70.61%)  
-**Submitted:** 2026-09-17T08:49:05.349Z  
+**Runtime:** 4 ms (beats 14.90%)  
+**Memory:** 12.5 MB (beats 35.31%)  
+**Submitted:** 2026-09-17T16:06:47.502Z  
 
 ```py
 class Solution(object):
@@ -49,7 +49,6 @@ class Solution(object):
             for j in range(1 , len(strs)):
                 if  i >= len(strs[j]) or strs[0][i] != strs[j][i]:
                     return strs[0][:i]
-
         return strs[0]
 ```
 
