@@ -40,12 +40,15 @@ Output: false
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 12.4 MB (beats 16.49%)  
-**Submitted:** 2026-09-17T08:28:16.595Z  
+**Submitted:** 2026-09-17T08:29:58.220Z  
 
 ```py
 class Solution(object):
     def rotateString(self, s, goal):
-        return len(s) == len(goal) and goal in s + s
+        if len(s) == len(goal) and goal in s + s:
+            return True
+        else:
+            return False
 ```
 
 ---
