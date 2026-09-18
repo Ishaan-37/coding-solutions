@@ -52,19 +52,19 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 596 ms (beats 34.47%)  
-**Memory:** 12.6 MB (beats 17.77%)  
-**Submitted:** 2026-09-14T18:25:24.563Z  
+**Runtime:** 660 ms (beats 19.11%)  
+**Memory:** 12.3 MB (beats 55.76%)  
+**Submitted:** 2026-09-18T16:46:13.658Z  
 
 ```py
 class Solution(object):
     def fib(self, n):
-        if n == 0:
+        if n==0:
             return 0
-        if n == 1:
+        if n==1:
             return 1
-        return self.fib(n - 1) + self.fib(n - 2)
-        
+        else:
+            return self.fib(n-1) + self.fib(n-2)        
 ```
 
 ---
