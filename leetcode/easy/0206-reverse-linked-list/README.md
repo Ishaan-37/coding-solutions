@@ -46,22 +46,19 @@ Output: []
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 14.4 MB (beats 30.89%)  
-**Submitted:** 2026-09-06T13:42:36.173Z  
+**Runtime:** 0 ms  
+**Memory:** 12.5 MB  
+**Submitted:** 2026-09-20T05:38:48.653Z  
 
 ```py
-
 class Solution(object):
     def reverseList(self, head):
-        a = None
-        b = head
-        while b:
-            n = b.next
-            b.next = a
-            a = b
-            b = n
-        return a
+        if head is None or head.next is None:
+            return head                               # BASE CASE
+            newHead = self.reverseList(head.next)   # RECURSIVE CALL
+            head.next.next = head                    # WORK
+            head.next = None                         # WORK
+            return newHead
 ```
 
 ---
