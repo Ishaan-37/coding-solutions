@@ -46,19 +46,19 @@ Output: []
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.5 MB  
-**Submitted:** 2026-09-20T05:38:48.653Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 18.1 MB (beats 5.01%)  
+**Submitted:** 2026-09-20T05:39:21.123Z  
 
 ```py
 class Solution(object):
     def reverseList(self, head):
         if head is None or head.next is None:
             return head                               # BASE CASE
-            newHead = self.reverseList(head.next)   # RECURSIVE CALL
-            head.next.next = head                    # WORK
-            head.next = None                         # WORK
-            return newHead
+        newHead = self.reverseList(head.next)   # RECURSIVE CALL
+        head.next.next = head                    # WORK
+        head.next = None                         # WORK
+        return newHead
 ```
 
 ---
