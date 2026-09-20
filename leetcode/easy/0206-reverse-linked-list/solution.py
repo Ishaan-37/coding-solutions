@@ -1,11 +1,8 @@
-
 class Solution(object):
     def reverseList(self, head):
-        a = None
-        b = head
-        while b:
-            n = b.next
-            b.next = a
-            a = b
-            b = n
-        return a
+        if head is None or head.next is None:
+            return head                               # BASE CASE
+            newHead = self.reverseList(head.next)   # RECURSIVE CALL
+            head.next.next = head                    # WORK
+            head.next = None                         # WORK
+            return newHead
