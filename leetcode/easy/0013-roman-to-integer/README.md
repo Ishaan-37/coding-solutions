@@ -67,9 +67,9 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.5 MB  
-**Submitted:** 2026-09-21T18:28:00.531Z  
+**Runtime:** 12 ms (beats 36.98%)  
+**Memory:** 12.4 MB (beats 22.26%)  
+**Submitted:** 2026-09-21T18:29:35.830Z  
 
 ```py
 class Solution(object):
@@ -81,11 +81,26 @@ class Solution(object):
             "L": 50,
             "C": 100,
             "D": 500,
-            "M": 1000
-            }
+            "M": 1000,
+            "IV": 4,
+            "IX": 9,
+            "XL": 40,
+            "XC": 90,
+            "CD": 400,
+            "CM": 900
+        }
+
         total = 0
-        for i in range(len(s)):
-            total = total + freq[s[i]]
+        i = 0
+
+        while i < len(s):
+            if i + 1 < len(s) and s[i:i+2] in freq:
+                total += freq[s[i:i+2]]
+                i += 2
+            else:
+                total += freq[s[i]]
+                i += 1
+
         return total
 ```
 
