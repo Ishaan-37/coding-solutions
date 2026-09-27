@@ -40,19 +40,22 @@ Output: [0]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 7 ms (beats 56.16%)  
-**Memory:** 13.4 MB (beats 77.19%)  
-**Submitted:** 2026-09-06T12:42:53.363Z  
+**Runtime:** 6 ms (beats 61.99%)  
+**Memory:** 13.5 MB (beats 50.55%)  
+**Submitted:** 2026-09-27T17:01:44.040Z  
 
 ```py
-class Solution(object):
+class Solution:
     def moveZeroes(self, nums):
-        n = len(nums)
-        j = 0
-        for i in range(0,n):
+        j = 0 # Pointer to place the next non-zero element
+        for i in range(len(nums)):
             if nums[i] != 0:
-                nums[i],nums[j] = nums[j], nums[i]
-                j+=1
+                # Swap current element with the element at index j 
+                nums[i], nums[j] = nums[j], nums[i]
+                j += 1 # Move j to the next index for placing non-zero
+            
+
+
 ```
 
 ---
