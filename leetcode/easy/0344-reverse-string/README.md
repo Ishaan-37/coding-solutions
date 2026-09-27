@@ -36,16 +36,20 @@ Output: ["h","a","n","n","a","H"]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 20.1 MB (beats 16.29%)  
-**Submitted:** 2026-09-01T18:37:47.936Z  
+**Runtime:** 3 ms (beats 54.06%)  
+**Memory:** 19.9 MB (beats 20.41%)  
+**Submitted:** 2026-09-27T13:45:38.746Z  
 
 ```py
 class Solution(object):
     def reverseString(self, s):
-        s[:] = s[:: -1]
-        
-        
+        start = 0 
+        end = len(s)-1
+        while start < end:
+            s[start],s[end] = s[end] , s[start] 
+            start += 1
+            end -= 1
+        return s
 ```
 
 ---
