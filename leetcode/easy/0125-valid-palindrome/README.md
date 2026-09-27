@@ -48,9 +48,9 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 241 ms (beats 11.99%)  
-**Memory:** 13.1 MB (beats 47.62%)  
-**Submitted:** 2026-09-27T17:33:12.807Z  
+**Runtime:** 0 ms  
+**Memory:** 12.4 MB  
+**Submitted:** 2026-09-27T17:33:56.403Z  
 
 ```py
 class Solution(object):
