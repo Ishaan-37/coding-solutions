@@ -50,9 +50,9 @@ Explanation: There is no x where 3x = (-1).
 ## Solution
 
 **Language:** Python  
-**Runtime:** 11 ms (beats 60.23%)  
-**Memory:** 12.3 MB (beats 59.35%)  
-**Submitted:** 2026-09-30T09:47:51.427Z  
+**Runtime:** 13 ms (beats 45.60%)  
+**Memory:** 12.5 MB (beats 21.00%)  
+**Submitted:** 2026-09-30T18:03:02.796Z  
 
 ```py
 class Solution(object):
