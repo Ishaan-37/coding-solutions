@@ -52,7 +52,7 @@ Explanation: There is no x where 3x = (-1).
 **Language:** Python  
 **Runtime:** 0 ms  
 **Memory:** 12.3 MB  
-**Submitted:** 2026-09-30T09:46:17.188Z  
+**Submitted:** 2026-09-30T09:46:29.675Z  
 
 ```py
 class Solution(object):
@@ -61,7 +61,7 @@ class Solution(object):
             return False
         if n % 3 == 0:
             n = n // 3
-            return n == True
+            return True
 ```
 
 ---
