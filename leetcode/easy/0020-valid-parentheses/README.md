@@ -54,9 +54,9 @@ An input string is valid if:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 73.59%)  
-**Memory:** 12.7 MB (beats 10.97%)  
-**Submitted:** 2026-08-31T15:30:29.969Z  
+**Runtime:** 3 ms (beats 74.06%)  
+**Memory:** 12.5 MB (beats 73.35%)  
+**Submitted:** 2026-10-01T11:42:35.845Z  
 
 ```py
 class Solution(object):
