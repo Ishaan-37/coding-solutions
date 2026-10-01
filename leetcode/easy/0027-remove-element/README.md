@@ -66,30 +66,20 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ## Solution
 
-**Language:** C++  
+**Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 11.8 MB (beats 12.13%)  
-**Submitted:** 2026-10-01T16:22:09.161Z  
+**Memory:** 12.3 MB (beats 90.32%)  
+**Submitted:** 2026-10-01T17:54:15.188Z  
 
-```cpp
-class Solution {
-public:
-    int removeElement(vector<int>& nums, int val) {
-        int n = nums.size();
-        vector<int> ans;
-        for(int i=0; i<n; i++){
-            if(nums[i] != val){
-                ans.push_back(nums[i]);
-            }
-            else{
-                continue;
-            }
-        }
-        nums = ans;
-        return ans.size();
-        
-    }
-};
+```py
+class Solution(object):
+    def removeElement(self, nums, val):
+        k = 0
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
 ```
 
 ---
