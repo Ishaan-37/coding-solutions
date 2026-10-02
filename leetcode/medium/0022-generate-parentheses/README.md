@@ -33,9 +33,9 @@ Output: ["()"]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 3 ms (beats 40.02%)  
-**Memory:** 12.6 MB (beats 55.67%)  
-**Submitted:** 2026-09-20T13:51:13.199Z  
+**Runtime:** 4 ms (beats 20.38%)  
+**Memory:** 12.6 MB (beats 88.23%)  
+**Submitted:** 2026-10-02T08:53:14.770Z  
 
 ```py
 class Solution(object):
