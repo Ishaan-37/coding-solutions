@@ -61,14 +61,15 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.3 MB (beats 92.05%)  
-**Submitted:** 2026-09-01T18:00:16.040Z  
+**Memory:** 12.4 MB (beats 22.63%)  
+**Submitted:** 2026-10-03T15:05:14.744Z  
 
 ```py
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
-        nums1[m:] = nums2
-        nums1.sort()
+        ans = nums1[:m] + nums2[:n]
+        ans.sort()
+        nums1[:] = ans
 ```
 
 ---
