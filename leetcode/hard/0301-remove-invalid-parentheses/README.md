@@ -45,9 +45,9 @@ Output: [""]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 2795 ms (beats 5.25%)  
-**Memory:** 12.6 MB (beats 75.93%)  
-**Submitted:** 2026-10-07T16:34:07.479Z  
+**Runtime:** 2743 ms (beats 5.25%)  
+**Memory:** 12.5 MB (beats 85.80%)  
+**Submitted:** 2026-10-07T17:26:05.699Z  
 
 ```py
 class Solution(object):
