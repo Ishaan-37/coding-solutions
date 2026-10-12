@@ -42,20 +42,15 @@ Output: 2
 ## Solution
 
 **Language:** Python  
-**Runtime:** 15 ms (beats 27.91%)  
-**Memory:** 13.5 MB (beats 97.57%)  
-**Submitted:** 2026-09-08T13:54:03.343Z  
+**Runtime:** 11 ms (beats 62.44%)  
+**Memory:** 13.5 MB (beats 75.20%)  
+**Submitted:** 2026-10-12T17:01:36.424Z  
 
 ```py
 class Solution(object):
     def majorityElement(self, nums):
-        n = len(nums)
-        nums.sort()
-        d = {}
-        for num in nums:
-            d[num] = d.get(num,0) + 1
-            if d[num] > n/2:
-                return num
+        return max(set(nums), key=nums.count)
+        
 ```
 
 ---
