@@ -1,15 +1,13 @@
 class Solution(object):
     def maxAlternatingSum(self, nums):
-        ans = []
+        nums.sort(key=abs)
         n = len(nums)
-         
-        for num in nums:
-            ans.append(num * num)
-        ans.sort(reverse=True)                       
         score = 0
-        for i in range(n):
-            if i < (n + 1) // 2:
-                score += ans[i]
-            else:
-                score -= ans[i]
+
+        for i in range(n // 2):
+            score -= nums[i] * nums[i]
+
+        for i in range(n // 2, n):
+            score += nums[i] * nums[i]
+
         return score
