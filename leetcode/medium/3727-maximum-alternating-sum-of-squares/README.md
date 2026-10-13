@@ -52,25 +52,23 @@ The alternating score is calculated as:
 ## Solution
 
 **Language:** Python  
-**Runtime:** 323 ms (beats 33.33%)  
-**Memory:** 24.9 MB (beats 20.00%)  
-**Submitted:** 2026-10-13T08:05:17.507Z  
+**Runtime:** 355 ms (beats 33.33%)  
+**Memory:** 25.1 MB (beats 20.00%)  
+**Submitted:** 2026-10-13T08:07:07.932Z  
 
 ```py
 class Solution(object):
     def maxAlternatingSum(self, nums):
-        ans = []
+        nums.sort(key=abs)
         n = len(nums)
-         
-        for num in nums:
-            ans.append(num * num)
-        ans.sort(reverse=True)                       
         score = 0
-        for i in range(n):
-            if i < (n + 1) // 2:
-                score += ans[i]
-            else:
-                score -= ans[i]
+
+        for i in range(n // 2):
+            score -= nums[i] * nums[i]
+
+        for i in range(n // 2, n):
+            score += nums[i] * nums[i]
+
         return score
 ```
 
