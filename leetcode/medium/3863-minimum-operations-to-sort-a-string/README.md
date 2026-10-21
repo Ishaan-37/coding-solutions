@@ -54,9 +54,9 @@ Return the  **minimum**  number of operations required to make `s` sorted in  **
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.2 MB  
-**Submitted:** 2026-10-21T14:19:08.134Z  
+**Runtime:** 415 ms (beats 27.27%)  
+**Memory:** 16 MB (beats 72.73%)  
+**Submitted:** 2026-10-21T14:19:13.009Z  
 
 ```py
 class Solution:
