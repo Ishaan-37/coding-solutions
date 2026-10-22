@@ -62,21 +62,26 @@ It is impossible to reach `[2, 0, 1, 3]`. Thus, the answer is -1.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 11.8 MB  
-**Submitted:** 2026-10-22T05:22:47.736Z  
+**Runtime:** 174 ms (beats 28.57%)  
+**Memory:** 20.7 MB (beats 100.00%)  
+**Submitted:** 2026-10-22T06:07:54.947Z  
 
 ```py
 class Solution(object):
-    def minOperations(self, nums):
-        n = len(nums)
-        arr = nums[:]
-        for i in range(n):
-            if arr == sorted(arr):
-                return i
-            if arr[::-1] == sorted(arr):
-                return i + 1
-            arr = arr[1:] + arr[:1]
+    def minOperations(self, A):
+        n = len(A)
+        asc, dsc = 1, 1
+        for i in range(1, n):
+            if A[i] == (A[i - 1] + 1) % n:
+                asc += 1
+            if A[i - 1] == (A[i] + 1) % n:
+                dsc += 1
+        if asc == n and A[0] == 0:
+            return 0
+        if asc == n:
+            return min(n - A[0], A[0] + 2)
+        if dsc == n:
+            return min(n - A[-1], A[-1]) + 1
         return -1
 ```
 
