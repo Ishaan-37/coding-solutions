@@ -43,9 +43,9 @@ Explanation: There is no day when Alice and Bob are in Rome together, so we retu
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12 MB  
-**Submitted:** 2026-10-24T08:07:33.146Z  
+**Runtime:** 1 ms (beats 18.60%)  
+**Memory:** 12.1 MB (beats 95.35%)  
+**Submitted:** 2026-10-24T08:07:40.447Z  
 
 ```py
 class Solution(object):
