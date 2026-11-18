@@ -61,9 +61,9 @@ Explanation: We don't need to make any changes as the string "0000" is beautiful
 ## Solution
 
 **Language:** Python  
-**Runtime:** 0 ms  
-**Memory:** 12.1 MB  
-**Submitted:** 2026-11-18T08:13:26.593Z  
+**Runtime:** 25 ms (beats 54.55%)  
+**Memory:** 14 MB (beats 36.36%)  
+**Submitted:** 2026-11-18T08:13:31.529Z  
 
 ```py
 class Solution(object):
