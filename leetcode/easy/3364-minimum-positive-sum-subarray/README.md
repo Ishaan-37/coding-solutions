@@ -62,9 +62,9 @@ The subarray `[1, 2]` has a length of 2 and the minimum sum greater than 0. So, 
 ## Solution
 
 **Language:** Python  
-**Runtime:** 64 ms (beats 53.38%)  
-**Memory:** 12.1 MB (beats 68.54%)  
-**Submitted:** 2026-11-18T08:12:14.303Z  
+**Runtime:** 55 ms (beats 62.83%)  
+**Memory:** 12.2 MB (beats 42.65%)  
+**Submitted:** 2026-11-18T08:13:48.474Z  
 
 ```py
 class Solution(object):
