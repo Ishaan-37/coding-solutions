@@ -60,18 +60,20 @@ The sum of `nums[0]` and `nums[1]` is `3 + 3 = 6`, which equals the target. Ther
 ## Solution
 
 **Language:** Python  
-**Runtime:** 2125 ms (beats 36.86%)  
-**Memory:** 13.1 MB (beats 53.43%)  
-**Submitted:** 2026-11-20T18:26:07.401Z  
+**Runtime:** 2 ms (beats 58.43%)  
+**Memory:** 12.9 MB (beats 69.88%)  
+**Submitted:** 2026-11-20T18:37:30.751Z  
 
 ```py
 class Solution(object):
     def twoSum(self, nums, target):
         n = len(nums)
+        ch = {}
         for i in range(n):
-            for j in range(i+1 , n):
-                if nums[i] + nums[j] == target:
-                    return [i,j]
+            difference = target - nums[i]
+            if difference in ch:
+                return [ ch[difference], i ]
+            ch[nums[i]] = i
 ```
 
 ---
