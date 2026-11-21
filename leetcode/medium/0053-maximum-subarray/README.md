@@ -8,6 +8,8 @@ Given an integer array `nums`, find the subarray with the largest sum, and retur
 
  
 
+Original
+Python
  **Example 1:** 
 
 ```
@@ -49,20 +51,19 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 ## Solution
 
 **Language:** Python  
-**Runtime:** 95 ms (beats 48.05%)  
-**Memory:** 21.3 MB (beats 25.24%)  
-**Submitted:** 2026-09-10T07:03:06.640Z  
+**Runtime:** 92 ms (beats 52.60%)  
+**Memory:** 20.9 MB (beats 89.90%)  
+**Submitted:** 2026-11-21T06:06:14.896Z  
 
 ```py
 class Solution(object):
     def maxSubArray(self, nums):
-        n = len(nums)
-        curr = nums[0]
-        prev = nums[0]
-        for i in range(1, n):
-            curr = max(nums[i], curr + nums[i])
-            prev = max(prev, curr)
-        return prev
+        max_sum = nums[0]
+        curr_sum = nums[0]       
+        for i in nums[1:]:
+            curr_sum = max(i, curr_sum + i)
+            max_sum = max(max_sum, curr_sum)          
+        return max_sum
 ```
 
 ---
