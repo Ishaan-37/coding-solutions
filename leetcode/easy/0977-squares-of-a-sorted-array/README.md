@@ -8,6 +8,8 @@ Given an integer array `nums` sorted in  **non-decreasing**  order, return  *an 
 
  
 
+Original
+Python
  **Example 1:** 
 
 ```
@@ -41,72 +43,18 @@ Output: [4,9,9,49,121]
 ## Solution
 
 **Language:** Python  
-**Runtime:** 20 ms (beats 13.13%)  
-**Memory:** 14.2 MB (beats 44.37%)  
-**Submitted:** 2026-07-14T09:27:48.363Z  
+**Runtime:** 24 ms (beats 8.38%)  
+**Memory:** 14 MB (beats 78.06%)  
+**Submitted:** 2026-11-21T05:32:11.505Z  
 
 ```py
-class Solution:
+class Solution(object):
     def sortedSquares(self, nums):
+        import math
+        ans = [int(math.pow(x, 2)) for x in nums]
+        ans.sort()
+        return ans
 
-        negative = []
-        positive = []
-
-        # Separate negative and positive numbers
-        for num in nums:
-            if num < 0:
-                negative.append(num)
-            else:
-                positive.append(num)
-
-        # If there are no negative numbers
-        if len(negative) == 0:
-            return [x * x for x in positive]
-
-        # If there are no positive numbers
-        if len(positive) == 0:
-            result = [x * x for x in negative]
-            result.reverse()
-            return result
-
-        # Square the negative numbers and reverse them
-        negative = [x * x for x in negative][::-1]
-
-        # Square the positive numbers
-        positive = [x * x for x in positive]
-
-        # Store the sizes of both arrays
-        n = len(negative)
-        m = len(positive)
-
-        # Store the final sorted squares
-        result = []
-
-        # Initialize two pointers
-        i = 0
-        j = 0
-
-        # Merge the two sorted arrays
-        while i < n and j < m:
-            if negative[i] <= positive[j]:
-                result.append(negative[i])
-                i += 1
-            else:
-                result.append(positive[j])
-                j += 1
-
-        # Add remaining elements from negative array
-        while i < n:
-            result.append(negative[i])
-            i += 1
-
-        # Add remaining elements from positive array
-        while j < m:
-            result.append(positive[j])
-            j += 1
-
-        # Return the sorted squares
-        return result
 ```
 
 ---
