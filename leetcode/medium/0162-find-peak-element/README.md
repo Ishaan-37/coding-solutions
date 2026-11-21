@@ -14,6 +14,8 @@ You must write an algorithm that runs in `O(log n)` time.
 
  
 
+Original
+Python
  **Example 1:** 
 
 ```
@@ -42,15 +44,13 @@ Explanation: Your function can return either index number 1 where the peak eleme
 
 **Language:** Python  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.6 MB (beats 17.17%)  
-**Submitted:** 2026-09-13T13:28:17.773Z  
+**Memory:** 12.1 MB (beats 93.36%)  
+**Submitted:** 2026-11-21T06:28:22.252Z  
 
 ```py
 class Solution(object):
     def findPeakElement(self, nums):
-        n = len(nums)
-        for i in range(n):
-            return nums.index(max(nums))
+        return nums.index(max(nums))
 ```
 
 ---
